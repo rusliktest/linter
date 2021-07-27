@@ -8,20 +8,20 @@ jobs:
       - name: lint with config
         uses: ./
         with:
+          config_file: .yamllint.yml
           file_or_dir: test
-          config_data: |
-            extends: default
-            ignore: nok.yaml
-            rules:
-              new-line-at-end-of-file:
-                level: warning
-              trailing-spaces:
-                level: warning
+          # config_data: |
+          #   extends: default
+          #   ignore: nok.yaml
+          #   rules:
+          #     line-length:
+          #       max: 120
 
       - name: lint all - no warnings (continue on error)
         continue-on-error: true
         uses: ./
         with:
+          config_file: .yamllint.yml
           file_or_dir: test
           strict: true
           no_warnings: true
@@ -30,5 +30,6 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
+          config_file: .yamllint.yml
           file_or_dir: test
           strict: true
