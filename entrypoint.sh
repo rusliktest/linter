@@ -26,10 +26,9 @@ fi
 shopt -s globstar
 # Use the current directory by default
 options+=("${INPUT_FILE_OR_DIR:-.}")
-options+=( "**/\"*.{yaml,yml,.yamllint}\"")
+# options+=( "**/\"*.{yaml,yml,.yamllint}\"")
 shopt -u globstar
 
-yamllint -c ./.yamllint.yaml **/\"*.{yaml,yml,.yamllint}\"
-# "${options[@]}"
+yamllint "${options[@]}"
 # **/\"*.{yaml,yml,.yamllint}\" 
 # "${options[@]}"
