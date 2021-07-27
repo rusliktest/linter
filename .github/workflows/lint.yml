@@ -9,7 +9,7 @@ jobs:
         uses: ./
         with:
           # config_file: .yamllint.yml
-          file_or_dir: test
+          file_or_dir: ./
           # config_data: |
           #   extends: default
           #   ignore: nok.yaml
@@ -22,7 +22,7 @@ jobs:
         uses: ./
         with:
           # config_file: .yamllint.yml
-          file_or_dir: test
+          file_or_dir: ./
           strict: true
           no_warnings: true
 
@@ -31,5 +31,5 @@ jobs:
         uses: ./
         with:
           # config_file: .yamllint.yml
-          file_or_dir: test
+          file_or_dir: ./
           strict: true
