@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
 RUN apk add --no-cache bash gcc musl-dev && \
-    sudo pip install 'yamllint>=1.25.0' && \
+    pip install 'yamllint>=1.25.0' && \
     rm -rf ~/.cache/pip
 
 ADD entrypoint.sh /entrypoint.sh
