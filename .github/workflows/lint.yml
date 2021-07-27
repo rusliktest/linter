@@ -8,7 +8,7 @@ jobs:
       - name: lint with config
         uses: ./
         with:
-          config_file: .yamllint.yml
+          # config_file: .yamllint.yml
           file_or_dir: test
           # config_data: |
           #   extends: default
@@ -21,7 +21,7 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
-          config_file: .yamllint.yml
+          # config_file: .yamllint.yml
           file_or_dir: test
           strict: true
           no_warnings: true
@@ -30,6 +30,6 @@ jobs:
         continue-on-error: true
         uses: ./
         with:
-          config_file: .yamllint.yml
+          # config_file: .yamllint.yml
           file_or_dir: test
           strict: true
