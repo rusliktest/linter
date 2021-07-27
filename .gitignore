@@ -25,6 +25,7 @@ wheels/
 *.egg
 /push.sh
 MANIFEST
+/SECRETS.md
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
