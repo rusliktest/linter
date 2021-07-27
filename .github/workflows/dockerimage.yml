@@ -2,9 +2,9 @@ name: Docker Image CI
 on: [push]
     # branches:
     #   - main
-    paths:
-      - 'Dockerfile'
-      - 'entrypoint.sh'
+paths:
+  - 'Dockerfile'
+  - 'entrypoint.sh'
 jobs:
   build:
     runs-on: ubuntu-latest
