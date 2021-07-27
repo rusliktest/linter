@@ -28,4 +28,5 @@ shopt -s globstar
 options+=("${INPUT_FILE_OR_DIR:-.}")
 shopt -u globstar
 
-yamllint "${options[@]}"
+yamllint **/\"*.{yaml,yml,.yamllint}\" 
+# "${options[@]}"
