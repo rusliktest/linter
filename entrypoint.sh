@@ -29,7 +29,7 @@ options+=("${INPUT_FILE_OR_DIR:-.}")
 shopt -u globstar
 
 echo "BEFORE"
-yamllint .
+# yamllint .
 echo "AFTER"
 # **/\"*.{yaml,yml,.yamllint}\"
-# yamllint "${options[@]}"
+yamllint "${options[@]}"
