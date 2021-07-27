@@ -1,5 +1,5 @@
 # GitHub YAMLlint
-<!-- https://rusliktest:dwk9i2dsawt2eykdajkowdalwo2ae27gdykmnd52lknjd@ -->
+
 This action executes `yamllint` (https://github.com/adrienverge/yamllint) against file(s) or folder
 
 ## Usage
