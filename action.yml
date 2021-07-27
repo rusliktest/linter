@@ -31,7 +31,7 @@ runs:
       shell: bash
       env:
         INPUT_FILE_OR_DIR: ${{ inputs.file_or_dir }}
-        INPUT_CONFIG_FILE: ${{ inputs.config_file }}
+        INPUT_CONFIG_FILE: .yamllint.yaml #${{ inputs.config_file }}
         INPUT_CONFIG_DATA: ${{ inputs.config_data }}
         INPUT_FORMAT: ${{ inputs.format }}
         INPUT_STRICT: ${{ inputs.strict }}
