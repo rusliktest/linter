@@ -17,19 +17,19 @@ jobs:
           #     line-length:
           #       max: 120
 
-      - name: lint all - no warnings (continue on error)
-        continue-on-error: true
-        uses: ./
-        with:
-          # config_file: .yamllint.yml
-          file_or_dir: ./
-          strict: true
-          no_warnings: true
+      # - name: lint all - no warnings (continue on error)
+      #   continue-on-error: true
+      #   uses: ./
+      #   with:
+      #     # config_file: .yamllint.yml
+      #     file_or_dir: ./
+      #     strict: true
+      #     no_warnings: true
 
-      - name: lint all (continue on error)
-        continue-on-error: true
-        uses: ./
-        with:
-          # config_file: .yamllint.yml
-          file_or_dir: ./
-          strict: true
+      # - name: lint all (continue on error)
+      #   continue-on-error: true
+      #   uses: ./
+      #   with:
+      #     # config_file: .yamllint.yml
+      #     file_or_dir: ./
+      #     strict: true
