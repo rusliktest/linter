@@ -1,7 +1,0 @@
----
-this:
-  is: a
-  valid:
-    - yaml
-    - file
-  with: warnings 

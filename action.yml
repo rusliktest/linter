@@ -1,6 +1,5 @@
 name: 'YAML Lint'
 description: 'Validate YAML syntax'
-author: 'ibiqlik'
 
 inputs:
   file_or_dir:
@@ -28,7 +27,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: chmod +x ${{ github.action_path }}/entrypoint.sh
+    - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
       env:
         INPUT_FILE_OR_DIR: ${{ inputs.file_or_dir }}
