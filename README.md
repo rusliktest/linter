@@ -1,5 +1,6 @@
 # GitHub YAMLlint
 
+<!-- readme -->
 This action executes `yamllint` (https://github.com/adrienverge/yamllint) against file(s) or folder
 
 ## Usage
