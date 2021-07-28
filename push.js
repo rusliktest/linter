@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 
-const VERSION = 'v26'
+const VERSION = 'v27'
 const BRANCH = 'main'
 
 exec(
