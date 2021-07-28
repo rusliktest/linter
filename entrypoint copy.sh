@@ -6,7 +6,7 @@ echo "======================"
 
 if [[ -n "$INPUT_CONFIG_FILE" ]]; then
     options+=(-c "$INPUT_CONFIG_FILE")
-elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
+else if [[ -n "$INPUT_CONFIG_DATA" ]]; then
     options+=(-d "$INPUT_CONFIG_DATA")
 else
     options+=(-d "{extends: default, rules: {line-length: {max: 112}}}")
