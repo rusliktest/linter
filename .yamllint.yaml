@@ -9,4 +9,4 @@ rules:
     max: 120
   document-start: enable
   truthy: disable
-  trailing-spaces: enable
+  trailing-spaces: disable
