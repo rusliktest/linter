@@ -4,7 +4,7 @@ RUN apk add --no-cache bash gcc musl-dev && \
     pip install 'yamllint>=1.25.0' && \
     rm -rf ~/.cache/pip
 
-# ADD folder/config.yaml /config.yaml
+COPY folder/config.yaml /config.yaml
 
 ADD entrypoint.sh /entrypoint.sh
 

@@ -6,7 +6,7 @@ ignore: |
 
 rules:
   line-length: 
-    max: 110
+    max: 113
   document-start: enable
   truthy: disable
   trailing-spaces: disable
