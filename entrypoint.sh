@@ -1,4 +1,5 @@
 #!/bin/bash -l
+# testing variables
 
 echo "======================"
 echo "= Linting YAML files ="
