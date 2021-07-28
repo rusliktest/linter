@@ -4,13 +4,7 @@ echo "======================"
 echo "= Linting YAML files ="
 echo "======================"
 
-DEFAULT_RULES=`
-    {extends: default, rules: {
-        line-length: {max: 120}, 
-        document-start: false,
-        truthy: disable
-    }
-`
+DEFAULT_RULES=`{extends: default, rules: {line-length: {max: 120}, document-start: false, truthy: disable}}`
 
 if [[ -n "$INPUT_CONFIG_FILE" ]]; then
     options+=(-c "$INPUT_CONFIG_FILE")
