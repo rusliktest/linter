@@ -1,10 +1,10 @@
 const { exec } = require("child_process");
 
-const VERSION = 'v10.5'
+const VERSION = 'v15'
 const BRANCH = 'main'
 
 exec(
-	`git add . & git commit -m "Commit for: ${VERSION}" & git tag -a -m "My release: ${VERSION}" ${VERSION} & git push origin ${BRANCH}`,
+	`git add . & git commit -m "Commit for: ${VERSION}" & git tag -a -m "My release: ${VERSION}" ${VERSION} & git push origin ${BRANCH} --follow-tags`,
 	(error, stdout, stderr) => {
 		if (error) {
 			console.log("error", error)
