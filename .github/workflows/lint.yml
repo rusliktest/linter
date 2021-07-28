@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: lint with config
-        # uses: ./
+        uses: ./
         # with:
         #   file_or_dir: ./
