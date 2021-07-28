@@ -9,7 +9,7 @@ DEFAULT_RULES="{\
     rules: {line-length: {max: 117}, \
     document-start: false, truthy: disable}, \
     ignore: /node_modules/}\
-    "
+"
 
 if [[ -n "$INPUT_CONFIG_FILE" ]]; then
     options+=(-c "$INPUT_CONFIG_FILE")
