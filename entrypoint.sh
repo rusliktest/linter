@@ -9,7 +9,7 @@ if [[ -n "$INPUT_CONFIG_FILE" ]]; then
 elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
     options+=(-d "$INPUT_CONFIG_DATA")
 else
-    options+=(-d "{extends: default, rules: {line-length: {max: 112}}}")
+    options+=(-d "{extends: default, rules: {line-length: {max: 114}}}")
 fi
 
 # if [[ -n "$INPUT_CONFIG_DATA" ]]; then

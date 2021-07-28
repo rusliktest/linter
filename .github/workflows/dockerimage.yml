@@ -1,21 +1,18 @@
 name: Docker Image CI
 on: [push, pull_request]
-  # push:
-  #   paths:
-  #     - 'Dockerfile'
-  #     - 'entrypoint.sh'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE: testdockerid123123jwada/action-yamllint
+      DOCKER_IMAGE: endpointtest/yamllint
       DOCKER_FILE: Dockerfile
     steps:
       - uses: actions/checkout@v1
       - name: Build the Docker image
         run: |
           docker logout
-          docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker login -u ${{ secrets.DOCKERHUB_U }} -p ${{ secrets.DOCKERHUB_T }}
           docker build . --file $DOCKER_FILE -t $DOCKER_IMAGE:$GITHUB_SHA -t $DOCKER_IMAGE:latest
           docker push $DOCKER_IMAGE:$GITHUB_SHA
           docker push $DOCKER_IMAGE:latest
