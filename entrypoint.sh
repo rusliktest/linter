@@ -9,15 +9,15 @@ echo "======================"
 
 if [[ -n "$INPUT_CONFIG_FILE" ]]; then
     options+=(-c "$INPUT_CONFIG_FILE")
+fi   
+# elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
+#     options+=(-d "$INPUT_CONFIG_DATA")
     
-elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
-    options+=(-d "$INPUT_CONFIG_DATA")
-    
-else
-    options+=(-d "{extends: default, rules: {line-length: {max: 120}, document-start: false, truthy: disable}}")
-    # "$DEFAULT_RULES")
-    # "{extends: default, rules: {line-length: {max: 109}}}")
-fi
+# else
+#     options+=(-d "{extends: default, rules: {line-length: {max: 120}, document-start: false, truthy: disable}}")
+#     # "$DEFAULT_RULES")
+#     # "{extends: default, rules: {line-length: {max: 109}}}")
+# fi
 
 # if [[ -n "$INPUT_CONFIG_DATA" ]]; then
 #     options+=(-d "$INPUT_CONFIG_DATA")
@@ -25,7 +25,7 @@ fi
 #     options+=(-d "config.yaml")
 # fi
 
-options+=(-f "$INPUT_FORMAT")
+# options+=(-f "$INPUT_FORMAT")
 
 if [[ "$INPUT_STRICT" == "true" ]]; then
     options+=(-s)
