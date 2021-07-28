@@ -19,21 +19,7 @@ elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
     
 else
     options+=(-d "$DEFAULT_RULES")
-    # options+=(-d "{\
-    # extends: default, \
-    # rules: {line-length: {max: 120}, \
-    # document-start: false, truthy: disable}, \
-    # ignore: /node_modules/}\
-    # ")
-    # "$DEFAULT_RULES")
-    # "{extends: default, rules: {line-length: {max: 109}}}")
 fi
-
-# if [[ -n "$INPUT_CONFIG_DATA" ]]; then
-#     options+=(-d "$INPUT_CONFIG_DATA")
-# else 
-#     options+=(-d "config.yaml")
-# fi
 
 options+=(-f "$INPUT_FORMAT")
 
@@ -53,5 +39,3 @@ options+=("${INPUT_FILE_OR_DIR:-.}")
 shopt -u globstar
 
 yamllint "${options[@]}"
-# **/\"*.{yaml,yml,.yamllint}\" 
-# "${options[@]}"
