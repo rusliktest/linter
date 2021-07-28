@@ -7,7 +7,7 @@ echo "======================"
 
 DEFAULT_RULES="{\
     extends: default, \
-    rules: {line-length: {max: 120}, \
+    rules: {line-length: {max: 117}, \
     document-start: false, truthy: disable}, \
     ignore: /node_modules/}\
     "
