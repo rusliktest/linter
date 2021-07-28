@@ -6,15 +6,17 @@ echo "======================"
 
 if [[ -n "$INPUT_CONFIG_FILE" ]]; then
     options+=(-c "$INPUT_CONFIG_FILE")
-else 
-    options+=(-d "config.yaml")
+else if [[ -n "$INPUT_CONFIG_DATA" ]]; then
+    options+=(-d "$INPUT_CONFIG_DATA")
+else
+    options+=(-d "{extends: default, rules: {line-length: {max: 112}}}")
 fi
 
-if [[ -n "$INPUT_CONFIG_DATA" ]]; then
-    options+=(-d "$INPUT_CONFIG_DATA")
+# if [[ -n "$INPUT_CONFIG_DATA" ]]; then
+#     options+=(-d "$INPUT_CONFIG_DATA")
 # else 
 #     options+=(-d "config.yaml")
-fi
+# fi
 
 options+=(-f "$INPUT_FORMAT")
 
