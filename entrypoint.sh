@@ -14,7 +14,12 @@ elif [[ -n "$INPUT_CONFIG_DATA" ]]; then
     options+=(-d "$INPUT_CONFIG_DATA")
     
 else
-    options+=(-d "{extends: default, rules: {line-length: {max: 120}, document-start: false, truthy: disable}}")
+    options+=(-d "{\
+    extends: default, \
+    rules: {line-length: {max: 120}, \
+    document-start: false, truthy: disable}, \
+    ignore: /node_modules/}\
+    ")
     # "$DEFAULT_RULES")
     # "{extends: default, rules: {line-length: {max: 109}}}")
 fi
